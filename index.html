@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Web site created using create-react-app"/>
+    <meta property="og:url" content="https://infant.pages.dev"/>
+    <meta property="og:title" content="Get started with Infant Lang"/>
+    <meta property="og:description" content="A Minimalistic Less Esoteric Programming Language for Infants"/>
+    <meta property="og:image" content="https://infant.pages.dev/ogimage.png"/>
     <title>Infant Lang</title>
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -160,10 +166,12 @@
             <span class="rights">All Rights Reserved © 2022 by Infant Lang</span>
         </div>
     </div>
-    <script>
+
+    <script defer>
         function stat(e){let t=` <div class="materialStatus"><span>${e}</span></div>`;t=(new DOMParser).parseFromString(t,"text/html"),t=t.querySelector("div.materialStatus"),document.body.appendChild(t),setTimeout(()=>{t.style.animation="closeMaterialStatus 0.2s linear 5s 1 forwards"},5e3)}
         document.querySelector(".rights").textContent = `All Rights Reserved © ${(new Date).getFullYear()} Infant Lang`
     </script>
+    <script defer>"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").then(e=>{console.debug("Success: ",e.scope),null==localStorage.getItem("offline")&&(localStorage.setItem("offline","true"),stat("This page can now run offline!"))}).catch(e=>console.debug("Failure: ",e))});</script>
 </body>
 
 </html>
