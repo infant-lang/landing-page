@@ -6,7 +6,6 @@
 
 * {
 	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
@@ -44,20 +43,47 @@ a {
 
 .firstSlide {
 	min-height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	text-align: center;
 }
 
 .logoAndTag {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 
 	padding-bottom: 2rem;
+}
+
+@-webkit-keyframes hue {
+	0% {
+		-webkit-filter: hue-rotate(0);
+	}
+	to {
+		-webkit-filter: hue-rotate(-1turn);
+	}
 }
 
 @keyframes hue {
@@ -70,6 +96,8 @@ a {
 }
 
 .productName {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	font-size: 1.2rem;
 	-webkit-text-fill-color: transparent;
@@ -111,15 +139,22 @@ a {
 }
 
 .buttonsContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 2rem 0 0 0;
 }
 
 @media screen and (max-width: 480px) {
 	.buttonsContainer {
 		padding-top: 1rem;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 }
 
@@ -128,22 +163,26 @@ a {
 }
 
 .buttons {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
 	display: -webkit-inline-flex;
 	position: relative;
-	align-items: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	-webkit-box-pack: center;
 	margin: 0 2rem 0 0;
 	padding: 0 3.5rem;
 	height: 2.81rem;
 	line-height: 2.8rem;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
 	border-radius: 7px;
-	justify-content: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
 	cursor: pointer;
 	text-decoration: none;
+	-webkit-transition: background 0.2s ease, color.2s ease, box-shadow.2s ease;
+	-o-transition: background 0.2s ease, color.2s ease, box-shadow.2s ease;
 	transition: background 0.2s ease, color.2s ease, box-shadow.2s ease;
 	outline: none;
 	border: none;
@@ -159,7 +198,6 @@ a {
 .blueButton {
 	background-color: #0070f3;
 	-webkit-box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-	-moz-box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
 	box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
 	color: white;
 }
@@ -167,7 +205,6 @@ a {
 .blueButton:hover {
 	background: #0070f3;
 	-webkit-box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
-	-moz-box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
 	box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
 }
 
@@ -182,14 +219,19 @@ a {
 .whiteButton:hover {
 	background: rgba(255, 255, 255, 0.9);
 	-webkit-box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
-	-moz-box-shadow: 0 6px 20px rgba(93, 93, 93, 0.23);
 	box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
 }
 
 .licenseContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 .licenseContainer a {
@@ -201,30 +243,21 @@ a {
 .licenseText {
 	position: relative;
 	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
-	display: -moz-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-moz-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
 	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-moz-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	cursor: pointer;
 	text-decoration: none;
 	padding: 0.25rem 0.5rem;
 	margin: -0.25rem -0.5rem;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
 	border-radius: 7px;
 	outline: none;
 	-webkit-transition: background.2s ease, color.2s ease, box-shadow.2s ease;
-	-moz-transition: background.2s ease, color.2s ease, box-shadow.2s ease;
 	-o-transition: background.2s ease, color.2s ease, box-shadow.2s ease;
 	transition: background.2s ease, color.2s ease, box-shadow.2s ease;
 }
@@ -251,16 +284,28 @@ a {
 }
 
 .secondSlide {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	text-align: center;
 	margin-top: 3rem;
 }
 
 .slideTitleContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	position: relative;
 	text-align: center;
 	margin: 1rem 0 3rem 0;
@@ -284,17 +329,20 @@ a {
 
 @media screen and (min-width: 640px) {
 	.componentsDetailsContainer {
+		-ms-grid-columns: (minmax(0, 1fr))[2];
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 
 @media screen and (min-width: 960px) {
 	.componentsDetailsContainer {
+		-ms-grid-columns: (minmax(0, 1fr))[3];
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }
 
 .componentsDetailsContainer {
+	display: -ms-grid;
 	display: grid;
 	grid-gap: 24px;
 	gap: 24px;
@@ -306,19 +354,34 @@ a {
 	padding: 24px;
 	border-radius: 5px;
 	text-align: left;
-	flex: 1 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1;
+	        flex: 1 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-transition: border 0.2s ease, -webkit-box-shadow 0.2s ease;
+	transition: border 0.2s ease, -webkit-box-shadow 0.2s ease;
+	-o-transition: box-shadow 0.2s ease, border 0.2s ease;
 	transition: box-shadow 0.2s ease, border 0.2s ease;
+	transition: box-shadow 0.2s ease, border 0.2s ease, -webkit-box-shadow 0.2s ease;
 	cursor: pointer;
 	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
 .component:hover {
+	-webkit-transition: -webkit-box-shadow 0.2s ease;
+	transition: -webkit-box-shadow 0.2s ease;
+	-o-transition: box-shadow 0.2s ease;
 	transition: box-shadow 0.2s ease;
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
+	-webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+	        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 	border: 1px solid transparent;
 }
 
@@ -331,10 +394,11 @@ a {
 
 .componentDesc {
 	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 	font-size: 14px;
-	flex: 1 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1;
+	        flex: 1 1;
 }
 
 .componentDocsLink {
@@ -366,9 +430,16 @@ a {
 }
 
 .thirdSlide {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	text-align: center;
 	margin-top: 5rem;
 	margin-bottom: 2rem;
@@ -389,17 +460,27 @@ a {
 }
 
 .fourthSlide {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	text-align: center;
 	margin-top: 6rem;
 	margin-bottom: 2rem;
 }
 
 .learnImageContainer img {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-	box-shadow: 0 8px 30px rgb(0 0 0 / 12%);
+	-webkit-box-shadow: 0 8px 30px rgb(0 0 0 / 12%);
+	        box-shadow: 0 8px 30px rgb(0 0 0 / 12%);
 	margin: 60px 0;
 }
 
@@ -439,11 +520,11 @@ a {
 }
 
 .subscribeContent {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 1fr 0.8fr;
 	grid-template-columns: 1fr 0.8fr;
 	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-moz-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 2rem auto;
@@ -453,9 +534,16 @@ a {
 
 @media screen and (max-width: 480px) {
     .subscribeContent {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 
@@ -486,7 +574,6 @@ a {
 .emailInputDiv {
 	text-align: center;
 	-webkit-transition: border-bottom-color 100ms ease-in, color 100ms ease-in;
-	-moz-transition: border-bottom-color 100ms ease-in, color 100ms ease-in;
 	-o-transition: border-bottom-color 100ms ease-in, color 100ms ease-in;
 	transition: border-bottom-color 100ms ease-in, color 100ms ease-in;
 	width: 240px;
@@ -504,17 +591,11 @@ a {
 .emailForm label {
 	background-color: transparent;
 	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid#999;
 	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-moz-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 0 auto;
@@ -525,8 +606,6 @@ a {
 .emailForm span {
 	margin: 0 14px;
 	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
-	display: -moz-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
@@ -539,11 +618,8 @@ a {
 .emailForm input[type="text"] {
 	background-color: transparent;
 	border: none;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
 	border-radius: 0;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	color: #000;
 	display: block;
@@ -558,7 +634,6 @@ a {
 	line-height: 27px;
 	width: 100%;
 	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	outline: none;
 }
@@ -566,26 +641,18 @@ a {
 .emailForm button {
 	position: relative;
 	display: -webkit-inline-box;
-	display: -webkit-inline-flex;
-	display: -moz-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-moz-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
 	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-moz-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	cursor: pointer;
 	text-decoration: none;
 	padding: 0.25rem 0.5rem;
 	margin: -0.25rem -0.5rem;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
 	border-radius: 7px;
 	color: #0070f3;
 	background-color: transparent;
@@ -593,7 +660,6 @@ a {
 	font-size: inherit;
 	line-height: inherit;
 	-webkit-transition: background.2s ease, color.2s ease, box-shadow.2s ease;
-	-moz-transition: background.2s ease, color.2s ease, box-shadow.2s ease;
 	-o-transition: background.2s ease, color.2s ease, box-shadow.2s ease;
 	transition: background.2s ease, color.2s ease, box-shadow.2s ease;
 	outline: none;
@@ -639,18 +705,35 @@ a {
 	padding: 0 1rem;
 	max-width: 1024px;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	justify-content: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	gap: 10px;
 	padding: 50px 32px;
 }
 
 .column {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	gap: 3px;
 	padding: 1rem;
 	color: #666;
