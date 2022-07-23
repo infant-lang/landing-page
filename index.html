@@ -118,7 +118,7 @@
             <div class="learnImageContainer">
                 <img src="/learn.webp" alt="Learn Infant Lang step-by-step" width="800" height="506">
             </div>
-            <a href="" class="buttons blueButton">Get Started</a>
+            <a href="https://infant-lang.netlify.app/" class="buttons blueButton">Get Started</a>
         </div>
 
         <div class="newsLetter">
@@ -147,12 +147,23 @@
             </div>
         </div>
 
-        <div class="footerContainer">
-            <div class="footerDiv">
-                
+    </div>
+    <div class="footerContainer">
+        <div class="footerDiv">
+            <div class="column">
+                <span>General resources</span>
+                <span><a href="https://infant-lang.netlify.app/">Docs</a></span>
+                <span><a href="https://infant-lang.netlify.app/docs/getting-started/creating-a-new-infant-script">Learn</a></span>
+                <span><a href="https://github.com/infant-lang">GitHub</a></span>
+                <span><a href="https://github.com/infant-lang/interpreter/releases">Download</a></span>
             </div>
+            <span class="rights">All Rights Reserved © 2022 by Infant Lang</span>
         </div>
     </div>
+    <script>
+        function stat(e){let t=` <div class="materialStatus"><span>${e}</span></div>`;t=(new DOMParser).parseFromString(t,"text/html"),t=t.querySelector("div.materialStatus"),document.body.appendChild(t),setTimeout(()=>{t.style.animation="closeMaterialStatus 0.2s linear 5s 1 forwards"},5e3)}
+        document.querySelector(".rights").textContent = `All Rights Reserved © ${(new Date).getFullYear()} Infant Lang`
+    </script>
 </body>
 
 </html>
